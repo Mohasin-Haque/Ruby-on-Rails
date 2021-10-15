@@ -1,0 +1,47 @@
+Step 1 Create a directory jtp in which all the code will be present and will navigate from the command line.
+mkdir jtp  
+
+Step 2 Change the directory to jtp
+
+cd jtp  
+Step 3 Create a new application with the name helloWorld.
+
+rails new helloWorld  
+You will see something as shown in the below snapshot.
+
+Ruby On rails 5 hello world example 1
+A helloWorld directory will be created in your system. Inside this folder there will be many files and subfolders which is actually the Rails application.
+
+Step 4 Move in to your above created application directory that is helloWorld.
+
+cd helloWorld  
+Step 5 Rails 5 has no longer a static index page in production. There will not be a root page in the production, so we need to create it. First we will create a controller called hello for our home page.
+
+rails generate controller hello  
+Ruby On rails 5 hello world example 2
+You will see something as shown in the above snapshot.
+
+Step 6 Now we need to add an index page.
+
+In file app/views/hello/index.html.erb, write
+
+<h2>Hello World</h2>   
+<p>   
+  Today is 23r March, Thursday.   
+</p>  
+Step 7 Now we need to route the Rails to this action. Edit the config/routes.rb file to set the index page to our new method.
+
+Add the following line in the routes.rb file,
+
+root 'hello#index'  
+Step 8 Now you can verify the page by running your server.
+
+rails server  
+Ruby On rails 5 hello world example 3
+By default, Rails server listens to the port 3000. Although you can change it with the following command.
+
+
+rails server -p portNumber  
+Step 9 Visit click here in your browser.
+
+Ruby On rails 5 hello world example 4
